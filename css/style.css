@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+html{
+    color: rgb(3, 0, 0);
+    font-size:  18px;
+}
+
+html ,body{
+    height: 100%;
+}
+
+html, body, nav, header, main, footer{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F6F6F6;
+    font-family:Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+     ". nav main ."
+     "footer footer footer footer";
+     grid-template-columns: auto min-content minmax(auto, 850px) auto;
+     grid-template-rows: min-content  auto min-content;
+
+}
+
+header{
+    grid-area: header;
+    background-color: #1A1A1D;
+    
+}
+
+
+main{
+    grid-area: main;
+    padding: 10px;
+    background-color: #FFFFFF;
+    
+}
+
+footer{
+    grid-area: footer;
+    background-color: #1A1A1D;
+    text-align: center;
+    list-style: none;
+    color: #F6F6F6;
+}
+
+.footers{
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: medium;
+}
+nav{
+    grid-area: nav;
+    background-color: #333333;
+    font-size: 1.2rem;
+   
+}
+
+#karta{
+    display: inline-block;
+}
+
+nav ul{
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 1px;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+}
+
+nav a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: white;
+    
+}
+
+header h1{
+    max-width: 1000px;
+    margin: 0 auto;
+    color: white;
+    padding: 10px;
+}
+/*
+nav li{
+    border:#f5eded solid 1px;
+}
+*/
+.localnav{
+    font-size: 80%;
+    padding-left: 10px;
+}
+
+body p{
+    padding: 5px;
+}
+
+#kontorsbilder{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+nav a:hover,
+nav a:active{
+    background-color: rgb(32, 29, 29);
+}
+
+nav a.thispage{
+    background-color: rgb(27, 26, 26);
+}
+
+img{
+    box-shadow:  1px 1px 1px 1px ;
+}
+#personalen{
+    display: flex;
+    flex-wrap: wrap;
+}
+#boka{
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 7px;
+    width: 300px;
+    background-color: #F6F6F6;
+}
+#boka input{
+    max-width: 35ch;
+}
+#boka textarea{
+    max-width: 35ch;
+}
+
+#pris1, #pris2, #pris3, #studentrabatt, #valkommen{
+    border: 1px solid ;
+    list-style: none;
+    width: 200px;
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color:#F6F6F6;
+    margin: 10px;
+    text-align: center;
+    height: 150px;
+    
+    
+}
+
+.betalning li{
+    margin: 10px;
+    padding: 0px;
+}
+.betalning{
+    padding-left: 0px;
+}
+    
+
+
+
+
+@media screen and (max-width:500px) {
+    body{
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer"
+        ;
+        grid-template-columns: auto;
+        }
+        
+    }
+    
